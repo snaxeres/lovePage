@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10 años juntos — Nuestro aniversario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <h1 class="title">Feliz 10° aniversario hermosa de mi corazooooooon</h1>
+        <p class="subtitle">Una década de risas, amor y recuerdos. Gracias por cada instante.</p>
+        <button id="startBtn" class="btn primary">Empezar</button>
+      </div>
+      <button id="musicToggle" class="music-toggle" aria-label="Pausar música">🔈</button>
+    </section>
+
+    <!-- GALLERY CAROUSEL -->
+    <section class="gallery-section" id="gallery">
+      <div class="carousel-container">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Foto anterior">❮</button>
+        
+        <div class="gallery-wrapper" id="galleryWrapper">
+          <div class="slide"><img src="assets/photos/photo1.jpg" alt="Recuerdo 1"></div>
+          <div class="slide"><img src="assets/photos/photo2.jpg" alt="Recuerdo 2"></div>
+          <div class="slide"><img src="assets/photos/photo3.jpg" alt="Recuerdo 3"></div>
+          <div class="slide"><img src="assets/photos/photo4.jpg" alt="Recuerdo 4"></div>
+          <div class="slide"><img src="assets/photos/photo5.jpg" alt="Recuerdo 5"></div>
+          <div class="slide last-slide">
+            <img src="assets/photos/photo6.jpg" alt="Recuerdo 6">
+            <button id="openVideoBtn" class="btn video-btn">Ver nuestro video ❤️</button>
+          </div>
+        </div>
+        
+        <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente foto">❯</button>
+      </div>
+
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <!-- MODAL VIDEO -->
+    <div id="videoModal" class="modal" aria-hidden="true">
+      <div class="modal-inner">
+        <button id="closeModal" class="close">✕</button>
+        <video id="reelVideo" src="assets/reel.mp4" controls playsinline webkit-playsinline></video>
+      </div>
+    </div>
+
+    <!-- AFTER VIDEO BUTTON -->
+    <div id="afterVideo" class="after-video" hidden>
+      <button id="continueBtn" class="btn primary">¿Seguimos escribiendo nuestra historia?</button>
+    </div>
+
+    <!-- COUNTER & FINAL MESSAGE -->
+    <section id="counterSection" class="counter-section">
+      <div class="counter-inner">
+        <h2 class="counter-title">Desde el 23 de diciembre de 2015</h2>
+        <div class="counter" id="counter">
+          <div class="counter-item"><span id="days">0</span><small>Días</small></div>
+          <div class="counter-item"><span id="hours">0</span><small>Horas</small></div>
+          <div class="counter-item"><span id="minutes">0</span><small>Minutos</small></div>
+        </div>
+        <p class="final-message" id="finalMessage">Cada día a tu lado es mi mejor aventura. Te amo.</p>
+        <button id="openLetterBtn" class="btn primary" style="margin-top: 2rem;">📮 Leer</button>
+      </div>
+    </section>
+
+    <!-- LETTER SECTION -->
+    <section id="letterSection" class="letter-section" hidden>
+      <button id="closeLetterBtn" class="close-letter">✕</button>
+      <div class="letter-container">
+        <div class="letter" id="letter">
+          <div class="letter-header">
+            <p class="letter-date">22 de diciembre de 2025</p>
+            <p class="letter-salutation">Mi amor,</p>
+          </div>
+          <div class="letter-body" id="letterContent">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div class="letter-footer">
+            <p class="letter-signature">Con todo mi amor,<br>Enriquito ❤️</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
